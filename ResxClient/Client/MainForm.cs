@@ -30,7 +30,7 @@ namespace ResourceManager.Client
 
             this.Text = Resources.ClientTitle;
 
-            this.dateiToolStripMenuItem.Text = Resources.File;
+            this.fileToolStripMenuItem.Text = Resources.File;
             this.translationsToolStripMenuItem.Text = Resources.Translations;
             this.toolStripMenuItemDocu.Text = Resources.Documentation;
 
@@ -261,7 +261,7 @@ namespace ResourceManager.Client
         #endregion
 
         #region Menu & toolbar events
-        private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }

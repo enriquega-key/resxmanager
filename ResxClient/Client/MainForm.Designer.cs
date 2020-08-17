@@ -30,7 +30,7 @@ namespace ResourceManager.Client
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemOpenSolution = new System.Windows.Forms.ToolStripMenuItem();
             this.itemCloseSolution = new System.Windows.Forms.ToolStripMenuItem();
             this.itemSaveResources = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +41,7 @@ namespace ResourceManager.Client
             this.itemClose = new System.Windows.Forms.ToolStripMenuItem();
             this.translationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storeAllTranslationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemTranslateAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemSetupDb = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +59,6 @@ namespace ResourceManager.Client
             this.toolImport = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolFillTranslations = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMenuItemTranslateAll = new System.Windows.Forms.ToolStripMenuItem();
             this.solutionTree1 = new ResourceManager.Client.Controls.SolutionTree();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -68,7 +68,7 @@ namespace ResourceManager.Client
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiToolStripMenuItem,
+            this.fileToolStripMenuItem,
             this.translationsToolStripMenuItem,
             this.toolStripMenuItemHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -77,9 +77,9 @@ namespace ResourceManager.Client
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dateiToolStripMenuItem
+            // fileToolStripMenuItem
             // 
-            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemOpenSolution,
             this.itemCloseSolution,
             this.itemSaveResources,
@@ -88,14 +88,14 @@ namespace ResourceManager.Client
             this.toolStripMenuItemExport,
             this.toolStripSeparator6,
             this.itemClose});
-            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.dateiToolStripMenuItem.Text = "Datei";
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
             // 
             // itemOpenSolution
             // 
             this.itemOpenSolution.Name = "itemOpenSolution";
-            this.itemOpenSolution.Size = new System.Drawing.Size(156, 22);
+            this.itemOpenSolution.Size = new System.Drawing.Size(180, 22);
             this.itemOpenSolution.Text = "Open solution";
             this.itemOpenSolution.Click += new System.EventHandler(this.solutionOpenToolStripMenuItem_Click);
             // 
@@ -103,27 +103,27 @@ namespace ResourceManager.Client
             // 
             this.itemCloseSolution.Enabled = false;
             this.itemCloseSolution.Name = "itemCloseSolution";
-            this.itemCloseSolution.Size = new System.Drawing.Size(156, 22);
+            this.itemCloseSolution.Size = new System.Drawing.Size(180, 22);
             this.itemCloseSolution.Text = "Close";
             this.itemCloseSolution.Click += new System.EventHandler(this.itemCloseSolution_Click);
             // 
             // itemSaveResources
             // 
             this.itemSaveResources.Name = "itemSaveResources";
-            this.itemSaveResources.Size = new System.Drawing.Size(156, 22);
+            this.itemSaveResources.Size = new System.Drawing.Size(180, 22);
             this.itemSaveResources.Text = "Save";
             this.itemSaveResources.Click += new System.EventHandler(this.itemSaveResources_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripMenuItemImport
             // 
             this.toolStripMenuItemImport.Enabled = false;
             this.toolStripMenuItemImport.Name = "toolStripMenuItemImport";
-            this.toolStripMenuItemImport.Size = new System.Drawing.Size(156, 22);
+            this.toolStripMenuItemImport.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemImport.Text = "Import";
             this.toolStripMenuItemImport.Click += new System.EventHandler(this.toolStripMenuItemImport_Click);
             // 
@@ -131,21 +131,21 @@ namespace ResourceManager.Client
             // 
             this.toolStripMenuItemExport.Enabled = false;
             this.toolStripMenuItemExport.Name = "toolStripMenuItemExport";
-            this.toolStripMenuItemExport.Size = new System.Drawing.Size(156, 22);
+            this.toolStripMenuItemExport.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemExport.Text = "Export";
             this.toolStripMenuItemExport.Click += new System.EventHandler(this.toolStripMenuItemExport_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
             // 
             // itemClose
             // 
             this.itemClose.Name = "itemClose";
-            this.itemClose.Size = new System.Drawing.Size(156, 22);
-            this.itemClose.Text = "Beenden";
-            this.itemClose.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
+            this.itemClose.Size = new System.Drawing.Size(180, 22);
+            this.itemClose.Text = "Exit";
+            this.itemClose.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // translationsToolStripMenuItem
             // 
@@ -155,25 +155,33 @@ namespace ResourceManager.Client
             this.toolStripSeparator3,
             this.toolStripMenuItemSetupDb});
             this.translationsToolStripMenuItem.Name = "translationsToolStripMenuItem";
-            this.translationsToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.translationsToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.translationsToolStripMenuItem.Text = "Translations";
             // 
             // storeAllTranslationsToolStripMenuItem
             // 
             this.storeAllTranslationsToolStripMenuItem.Name = "storeAllTranslationsToolStripMenuItem";
-            this.storeAllTranslationsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.storeAllTranslationsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.storeAllTranslationsToolStripMenuItem.Text = "StoreAllTranslations";
             this.storeAllTranslationsToolStripMenuItem.Click += new System.EventHandler(this.storeAllTranslationsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItemTranslateAll
+            // 
+            this.toolStripMenuItemTranslateAll.Enabled = false;
+            this.toolStripMenuItemTranslateAll.Name = "toolStripMenuItemTranslateAll";
+            this.toolStripMenuItemTranslateAll.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItemTranslateAll.Text = "Translate";
+            this.toolStripMenuItemTranslateAll.Click += new System.EventHandler(this.toolStripMenuItemTranslateAll_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(174, 6);
             // 
             // toolStripMenuItemSetupDb
             // 
             this.toolStripMenuItemSetupDb.Name = "toolStripMenuItemSetupDb";
-            this.toolStripMenuItemSetupDb.Size = new System.Drawing.Size(179, 22);
+            this.toolStripMenuItemSetupDb.Size = new System.Drawing.Size(177, 22);
             this.toolStripMenuItemSetupDb.Text = "SetupDatabase";
             this.toolStripMenuItemSetupDb.Click += new System.EventHandler(this.toolStripMenuItemSetupDb_Click);
             // 
@@ -263,7 +271,7 @@ namespace ResourceManager.Client
             this.toolExport.Image = ((System.Drawing.Image)(resources.GetObject("toolExport.Image")));
             this.toolExport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolExport.Name = "toolExport";
-            this.toolExport.Size = new System.Drawing.Size(60, 22);
+            this.toolExport.Size = new System.Drawing.Size(61, 22);
             this.toolExport.Text = "Export";
             this.toolExport.Click += new System.EventHandler(this.toolExport_Click);
             // 
@@ -288,17 +296,9 @@ namespace ResourceManager.Client
             this.toolFillTranslations.Image = ((System.Drawing.Image)(resources.GetObject("toolFillTranslations.Image")));
             this.toolFillTranslations.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolFillTranslations.Name = "toolFillTranslations";
-            this.toolFillTranslations.Size = new System.Drawing.Size(75, 22);
+            this.toolFillTranslations.Size = new System.Drawing.Size(73, 22);
             this.toolFillTranslations.Text = "Translate";
             this.toolFillTranslations.Click += new System.EventHandler(this.toolFillTranslations_Click);
-            // 
-            // toolStripMenuItemTranslateAll
-            // 
-            this.toolStripMenuItemTranslateAll.Enabled = false;
-            this.toolStripMenuItemTranslateAll.Name = "toolStripMenuItemTranslateAll";
-            this.toolStripMenuItemTranslateAll.Size = new System.Drawing.Size(179, 22);
-            this.toolStripMenuItemTranslateAll.Text = "Translate";
-            this.toolStripMenuItemTranslateAll.Click += new System.EventHandler(this.toolStripMenuItemTranslateAll_Click);
             // 
             // solutionTree1
             // 
@@ -335,7 +335,7 @@ namespace ResourceManager.Client
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemClose;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ToolStripMenuItem itemOpenSolution;
