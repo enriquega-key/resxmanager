@@ -58,6 +58,8 @@ namespace ResourceManager.Converter
                         AddProject(project, workbook, cultures, data);
                 }
 
+                workbook.Protect(true);
+
                 workbook.SaveAs(filePath);
             }
         }
