@@ -109,6 +109,12 @@ namespace ResourceManager.Converter
 
                 worksheet.Style.Alignment.SetVertical(XLAlignmentVerticalValues.Top);
             }
+
+            worksheet.SheetView.FreezeRows(1); //fijar la primera fila la hoja
+
+            worksheet.Range(1, 1, rowIndex, cultures.Count() + 2).Style.Protection.SetLocked(false); //desbloquear toda la hoja para bloquear sólo lo que queremos
+            worksheet.Row(1).Style.Protection.SetLocked(true); //bloquear edición de la primera fila
+            worksheet.Columns(1, 2).Style.Protection.SetLocked(true); //bloquear edición de la primera y segunda columna (clave de fichero y clave de cadena)
         }
         private void AddHeader(IXLWorksheet worksheet, VSProject project, IEnumerable<CultureInfo> cultures)
         {
