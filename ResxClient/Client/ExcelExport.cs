@@ -54,7 +54,7 @@ namespace ResourceManager.Client
         {
             cbkExportComments.Text = Properties.Resources.ExportComments;
             cbkExportDiff.Text = Properties.Resources.ExportDiff;
-	        cbkIncludeProjectsWithoutTranslations.Text = Properties.Resources.IncludeProjectsWithoutTranslations;
+            cbkIncludeProjectsWithoutTranslations.Text = Properties.Resources.IncludeProjectsWithoutTranslations;
             cbkAutoAdjustLayout.Text = Properties.Resources.AutoAdjustLayout;
             cbkIgnoreInternalResources.Text = Properties.Resources.IgnoreInternalResources;
             btnCancel.Text = Properties.Resources.Cancel;
@@ -126,7 +126,7 @@ namespace ResourceManager.Client
 
                     excel.ExportComments = cbkExportComments.Checked;
                     excel.ExportDiff = cbkExportDiff.Checked;
-	                excel.IncludeProjectsWithoutTranslations = cbkIncludeProjectsWithoutTranslations.Checked;
+                    excel.IncludeProjectsWithoutTranslations = cbkIncludeProjectsWithoutTranslations.Checked;
                     excel.AutoAdjustLayout = cbkAutoAdjustLayout.Checked;
                     excel.IgnoreInternalResources = cbkIgnoreInternalResources.Checked;
                     excel.Cultures = cultures.SelectedCultures;

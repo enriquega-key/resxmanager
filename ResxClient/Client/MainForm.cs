@@ -323,7 +323,7 @@ namespace ResourceManager.Client
         }
         private void toolStripMenuItemDocu_Click(object sender, EventArgs e)
         {
-			System.Diagnostics.Process.Start("https://github.com/lbonifacius/resxmanager/blob/master/docs/Documentation.md");
+            System.Diagnostics.Process.Start("https://github.com/lbonifacius/resxmanager/blob/master/docs/Documentation.md");
         }
         private void toolStripMenuItemTranslateAll_Click(object sender, EventArgs e)
         {

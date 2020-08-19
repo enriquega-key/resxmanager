@@ -298,7 +298,7 @@ namespace ResourceManager.Converter
                 {
                     var textValues = row.Cells(1, lastColumn + 1).Select(cell => (cell.Value != null ? cell.Value.ToString() : null)).ToList<String>();
                 
-					if (textValues.Any())
+                    if (textValues.Any())
                     {
                         var customer = new TranslationRow();
                         customer.ID = textValues[0];
